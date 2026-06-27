@@ -1,0 +1,128 @@
+/* ============================================
+   ABOUT PAGE STYLES
+   ============================================ */
+
+.about-hero {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: var(--white);
+  padding: 60px var(--spacing-md) 40px;
+  text-align: center;
+}
+
+.about-hero h1 {
+  color: var(--white);
+  margin-bottom: var(--spacing-md);
+}
+
+.about-content {
+  background: var(--off-white);
+}
+
+.about-section {
+  padding: var(--spacing-2xl) 0;
+  border-bottom: 1px solid var(--light-gray);
+}
+
+.about-section:last-child {
+  border-bottom: none;
+}
+
+.about-section h2 {
+  margin-bottom: var(--spacing-lg);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-gray);
+  margin-bottom: var(--spacing-md);
+}
+
+.mission-card,
+.vision-card,
+.values-card {
+  background: var(--white);
+  padding: var(--spacing-lg);
+  border-radius: var(--radius-lg);
+  border-top: 4px solid var(--accent-gold);
+  box-shadow: var(--shadow-md);
+}
+
+.mission-card h3,
+.vision-card h3,
+.values-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: var(--spacing-md);
+}
+
+.values-list {
+  list-style: none;
+}
+
+.values-list li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+  color: var(--text-gray);
+  font-size: 1rem;
+}
+
+.values-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--accent-gold);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.statistics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--spacing-lg);
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: var(--white);
+  padding: var(--spacing-2xl);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.stat-item h3 {
+  color: var(--accent-gold);
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.stat-item p {
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+/* ============================================
+   MOBILE RESPONSIVE - ABOUT PAGE
+   ============================================ */
+
+@media (max-width: 768px) {
+  .about-hero {
+    padding: 40px var(--spacing-md) 30px;
+  }
+
+  .about-section {
+    padding: var(--spacing-xl) 0;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .statistics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
